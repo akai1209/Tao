@@ -18,13 +18,13 @@ load_dotenv()
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {
-    "origins": ["https://corner.qnguyen3.dev", "http://localhost:3000", "http://localhost:5173"],
+    "origins": ["https://corner.toibingu.dev", "http://localhost:3000", "http://localhost:5173"],
     "methods": ["GET", "POST", "OPTIONS"],
     "allow_headers": ["Content-Type"]
 }})
 
 # Configuration
-DATA_URL = 'https://www.football-data.co.uk/mmz4281/2526/E0.csv'
+DATA_URL = 'https://www.football-data.co.uk/mmz4281/2526/D1.csv'
 HISTORICAL_SEASONS = ['2324', '2425', '2526']  # Last 3 seasons for H2H
 OPENROUTER_API_KEY = os.environ.get('OPENROUTER_API_KEY')
 OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions'
